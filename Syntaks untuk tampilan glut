@@ -1,0 +1,32 @@
+#include <stdio.h> //Mengakses file library stdio.h
+#include <stdlib.h> //Mengakses file library stdlib.h
+#include <string.h> //Mengakses file library string.h
+#include <stdarg.h> //Mengakses file library stdarg.h
+#include <glut.h> //Mengakses file library glut.h
+void mydisplay(){
+    glClear(GL_COLOR_BUFFER_BIT); //Menghapus layar
+    glBegin(GL_POLYGON); //Memanggil fungsi openGL Geometric Primitive
+    glColor3f(0, 1, 0); //Fungsi untuk menentukan warna
+    glVertex3f(-0.5, -0.5, 1); //Vertex 3 dimensi x, y, z
+    glColor3f(0, 0, 1);
+    glVertex3f(-0.75, 0, 1);
+    glColor3f(1, 0, 0);
+    glVertex3f(-0.5, 0.5, 1);
+    glColor3f(0, 1, 0);
+    glVertex3f(0, 0.75, 1);
+    glColor3f(0, 0, 1);
+    glVertex3f(0.5, 0.5, -1);
+    glColor3f(1, 0, 0);
+    glVertex3f(0.75, 0, -1);
+    glColor3f(0, 1, 0);
+    glVertex3f(0.5, -0.5, -1);
+    glColor3f(0, 0, 1);
+    glVertex3f(0,-0.75, -1);
+    glEnd();
+    glFlush();
+}
+int main(int argc, char** argv){
+    glutCreateWindow("Siti Witty Ariyanti"); //Memberi nama untuk file yang akan di run
+    glutDisplayFunc(mydisplay);
+    glutMainLoop();
+}
